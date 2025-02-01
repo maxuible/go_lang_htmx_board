@@ -1,5 +1,15 @@
+
+{{ block "posts" . }}
+<div id="posts" hx-swap-oob="true">
+  {{ range .  }}
+  {{ template "post" . }}
+  {{ end }}
+</div>
+{{ end }}
+
+
 {{ block "post" . }}
-<div>
+<div class="post">
   <h2>{{ .Title }}</h2>
   <p>{{ .Body }}</p>
   <hr>
