@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+</head>
+<body>
+    <form hx-post="posts"
+    hx-swap="afterend">
+        <label>
+            Title
+            <input name="title" type="text">
+        </label>
+        <label>
+            Body:
+            <input name="body" type="text">
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+    {{ range .  }}
+        {{ template "post" . }}
+    {{ end }}
+</body>
+</html>
