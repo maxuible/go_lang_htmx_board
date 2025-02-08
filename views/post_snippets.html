@@ -12,6 +12,31 @@
 <div class="post">
   <h2>{{ .Title }}</h2>
   <p>{{ .Body }}</p>
-  <hr>
 </div>
 {{ end }}
+
+
+{{ block "post_form" . }}
+<form
+        hx-post="posts"
+        hx-swap-oob="posts"
+        hx-swap="none">
+  <label>
+    Title:
+    <br>
+    <input id="title" name="title" type="text">
+  </label>
+  <br>
+  <label>
+    Body:
+    <br>
+    <textarea name="body"></textarea>
+  </label>
+  <input type="submit" value="Submit">
+</form>
+{{ if . }}
+  <p>ERROR?</p>
+{{ end }}
+
+{{ end }}
+

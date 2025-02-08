@@ -7,28 +7,11 @@
     <link rel="stylesheet" href="/static/css/posts.css">
 </head>
 <body>
+    {{ template "post_form" .Errors }}
 
-    <form hx-post="posts"
-    hx-swap-oob="posts"
-    hx-swap="none">
-        <label>
-            Title:
-            <br>
-            <input name="title" type="text">
-        </label>
-        <br>
-        <label>
-            Body:
-            <br>
-            <textarea name="body">
-
-            </textarea>
-        </label>
-        <input type="submit" value="Submit">
-    </form>
     <hr>
 
-    {{ template "posts" . }}
+    {{ template "posts" .Posts }}
 
 </body>
 </html>

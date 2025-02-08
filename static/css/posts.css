@@ -1,3 +1,28 @@
 html{
     background-color: floralwhite;
 }
+
+form{
+    margin-left: 25%;
+    width: 50%;
+}
+
+textarea{
+    width: 100%;
+}
+
+#title{
+    width: 50%;
+}
+
+.post{
+    margin-left: 25%;
+    width: 50%;
+    margin-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+}
